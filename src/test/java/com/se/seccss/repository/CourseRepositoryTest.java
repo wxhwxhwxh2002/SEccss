@@ -2,8 +2,12 @@ package com.se.seccss.repository;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -20,11 +24,18 @@ class CourseRepositoryTest {
 
     @Test
     @ParameterizedTest
-    void findCourseByDept(String dept_name,String college_name,String grade){
-        //input
-        dept_name="软件工程";
-        college_name="计算学院";
-        grade="2020";
-        System.out.println(courseRepository.findCourseByDept(dept_name,college_name,grade));
+    @MethodSource("provideDeptAndCollegeAndGrade")
+    void findCourseByDept(){
+
     }
+
+    static Stream<Arguments> provideDeptAndCollegeAndGrade(){
+        return Stream.of(
+                Arguments.of("软件工程", "计算学院", "2020"),
+                Arguments.of("计算机科学", "计算学院", "2020"),
+                Arguments.of("大数据", "计算学院", "2020")
+
+        );
+    }
+
 }
