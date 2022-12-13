@@ -8,7 +8,7 @@ import javax.persistence.Id;
 
 /**
  * 功能描述
- *
+ * Dept实体类
  * @author: WenXiaohan_32005231_ZUCC
  * @date: 2022年12月04日 16:21
  */

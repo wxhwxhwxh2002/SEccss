@@ -12,7 +12,7 @@ import java.util.List;
 
 /**
  * 功能描述
- *
+ * Course相关的控制器
  * @author: WenXiaohan_32005231_ZUCC
  * @date: 2022年12月04日 16:15
  */

@@ -9,7 +9,7 @@ import javax.persistence.criteria.CriteriaBuilder;
 
 /**
  * 功能描述
- *
+ * Time_info实体类
  * @author: WenXiaohan_32005231_ZUCC
  * @date: 2022年12月04日 16:27
  */
