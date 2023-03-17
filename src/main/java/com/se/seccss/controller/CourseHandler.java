@@ -6,6 +6,7 @@ import com.se.seccss.service.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -29,7 +30,7 @@ public class CourseHandler {
     }
 
     @GetMapping("/findCourseByDept")
-    public List<Course> findCourseByDeptId(String dept_name, String college_name, String grade) {
+    public List<Course> findCourseByDeptId(@RequestParam String dept_name, @RequestParam String college_name, @RequestParam String grade) {
         return courseService.findCourseByDept(dept_name, college_name, grade);
     }
 }

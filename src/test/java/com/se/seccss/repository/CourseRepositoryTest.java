@@ -33,7 +33,13 @@ class CourseRepositoryTest {
         return Stream.of(
                 Arguments.of("计算学院", "2020"),
                 Arguments.of("计算机科学", "计算学院", "2020"),
-                Arguments.of("大数据", "计算学院", "2020")
+                Arguments.of("大数据", "计算学院", "2020"),
+                Arguments.of( "软件工程", "计算学院", "2020"),
+                Arguments.of("计算学院", "2022"),
+                Arguments.of("计算机科学", "2022"),
+                Arguments.of("大数据", "2022"),
+                Arguments.of( "软件工程", "2022")
+
 
         );
     }
